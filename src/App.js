@@ -1,5 +1,5 @@
 //App.js는 router를 render한다.
-import { BrowserRouter as Router, Route,Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
 
@@ -8,7 +8,10 @@ function App() {
     <Router>
       <Routes>
         <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
-        <Route path={`${process.env.PUBLIC_URL}/`} element={<Detail />} />
+        <Route
+          path={`${process.env.PUBLIC_URL}/movie/:id`}
+          element={<Detail />}
+        />
       </Routes>
     </Router>
   );
